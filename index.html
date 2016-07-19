@@ -27,61 +27,47 @@
     <div class="container">
       <div class="panel panel-default">
         <div class="panel-heading">
-          <h3 class="panel-title"><a data-toggle="collapse" href="#toCollapse" aria-expanded="false" aria-controls="toCollapse">Random Quote Generator - Click for Details</a></h3>
+          <h3 class="panel-title"><a data-toggle="collapse" href="#toCollapse" aria-expanded="false" aria-controls="toCollapse">Local Weather - Click for Details</a></h3>
         </div>
         <ul class="list-group collapse" id="toCollapse">
           <li class="list-group-item">
             <strong>Description</strong>
-            <p>Random Quote Generator is an intermediate front end project on Free Code Camp. The program allows you to click to view a new quote, or to tweet the quote you're currently viewing.</p>
+            <p>Local Weather is an intermediate front end project on freecodecamp.com. The program allows you to get relevant weather information based on your current location.</p>
           </li>
           <li class="list-group-item">
             <strong>Features</strong>
-            <p>The random quote generator makes an API call to retrieve an array of random quotes. It also features a Tweet button that will tweet the current quote the user is viewing</p>
+            <p>Local Weather accesses your devices current location and then makes API calls to Google for geolocation information as well as Forecast.io for the weather forecast.</p>
           </li>
           <li class="list-group-item">
             <strong>Challenges</strong>
-            <p>The biggest challenge for me on this project was figuring out the API call. Unfortunately, because the quote API endpoint is served over http, I am forced to also serve this page over http. I wish that I could find a way to make HTTPS work
-              with it.</p>
-            <p>My other challenge was figuring out how to tweet long strings that feature string-unfriendly characters. The answer: encodeURIComponent()</p>
+            <p>Working with location was easier than expected. Honestly, the hardest part was formatting the results correctly. I used jQuery more in this app than ever before.</p>
           </li>
           <li class="list-group-item">
             <strong>Technology</strong>
-            <p>jQuery, Bootstrap, AJAX, Programming Quotes API by Adam Pope, Tweet button API</p>
+            <p>jQuery, Bootstrap, AJAX, Forecast.io API, Google Geolocation API</p>
           </li>
         </ul>
       </div>
 
       <!-- Application HTML -->
-
-      <div class="jumbotron">
-          <h2 id="city" class="text-center">Getting location...</h2>
-          <div class="row">
-            <div class="col-sm-4">
-              <canvas id="weatherIcon" width="128" height="128"></canvas>
-              <p id="summary" class="text-center">
-                <p>
-            </div>
-            <div class="col-sm-4">
-              <h1 id="fTemperature" class="text-center">--&#8457;</h1>
-              <h1 id="cTemperature" class="text-center" style="display: none">--&#8451;</h1>
-              <button id="tempToggle" class="btn btn-block btn-default">&#8457; / &#8451;</button>
-            </div>
-            <div class="col-sm-4">
-                <ul class="list-unstyled">
-                  <li>
-                    <h3>Details</h3>
-                    <li>
-                      <h4 id="wind">Wind: </h4></li>
-                    <li>
-                      <h4 id="humidity">Humidity: </h4></li>
-                    <li>
-                      <h4 id="pressure">Pressure: </h4></li>
-                    <li>
-                      <h4 id="visability">Visability: </h4></li>
-                </ul>
-            </div>
-          </div>
+      <h1 id="city" class="text-center">Getting location...</h1>
+      <div class="row" id="weather">
+        <div class="col-sm-6">
+          <canvas id="weatherIcon" width="128" height="128"></canvas>
+          <p class="text-center" style="font-size: 500%;">
+            <span id="temperature"></span>
+            <a id="fTempToggle" role="button">&#8457;</a>
+            <a id="cTempToggle" role="button" style="display: none;">&#8451;</a>
+          </p>
         </div>
+        <div class="col-sm-6" id="details">
+          <p id="summary"><strong>Summary: </strong></p>
+          <p id="wind"><strong>Wind: </strong></p>
+          <p id="humidity"><strong>Humidity: </strong></p>
+          <p id="pressure"><strong>Pressure: </strong></p>
+          <p id="visability"><strong>Visability: </strong></p>
+        </div>
+      </div>
 
       <!-- End App -->
     </div>
