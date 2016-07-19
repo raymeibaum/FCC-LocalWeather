@@ -30,6 +30,7 @@ div .row {
 }
 #details p {
   font-size: 180%;
+  margin: 20px;
 }
 a {
   text-decoration: none;
