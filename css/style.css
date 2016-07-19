@@ -30,9 +30,12 @@ div .row {
 }
 #details p {
   font-size: 180%;
-  margin: 20px;
+  padding: 20px;
 }
 a {
   text-decoration: none;
   color: inherit;
+}
+#city {
+  padding: 10px;
 }
