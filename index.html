@@ -1,25 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Ray Meibaum | Local Weather</title>
+<head>
+  <title>Ray Meibaum | Web Developer</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Ray E. Meibaum">
+  <meta name="description" content="Atlanta based Web Developer">
+  <meta name="keywords" content="JavaScript, HTML, CSS, Web Developer, Atlanta">
 
-    <!-- Bootstrap & Font Awesome CSS-->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
-  </head>
+  <!-- CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/206d5e6fcc.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
 
-  <body>
-    <div class="container">
-    <h1>Current Weather in </h1
+<body>
+  <div class="container">
+    <div class="page-header">
+      <h1>Ray Meibaum<br/><small>Web Developer | Atlanta, GA</small></h1>
     </div>
-  </body>
+  </div>
+  <main>
+    <!-- Project Details -->
+    <div class="container">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title"><a data-toggle="collapse" href="#toCollapse" aria-expanded="false" aria-controls="toCollapse">Random Quote Generator - Click for Details</a></h3>
+        </div>
+        <ul class="list-group collapse" id="toCollapse">
+          <li class="list-group-item">
+            <strong>Description</strong>
+            <p>Random Quote Generator is an intermediate front end project on Free Code Camp. The program allows you to click to view a new quote, or to tweet the quote you're currently viewing.</p>
+          </li>
+          <li class="list-group-item">
+            <strong>Features</strong>
+            <p>The random quote generator makes an API call to retrieve an array of random quotes. It also features a Tweet button that will tweet the current quote the user is viewing</p>
+          </li>
+          <li class="list-group-item">
+            <strong>Challenges</strong>
+            <p>The biggest challenge for me on this project was figuring out the API call. Unfortunately, because the quote API endpoint is served over http, I am forced to also serve this page over http. I wish that I could find a way to make HTTPS work
+              with it.</p>
+            <p>My other challenge was figuring out how to tweet long strings that feature string-unfriendly characters. The answer: encodeURIComponent()</p>
+          </li>
+          <li class="list-group-item">
+            <strong>Technology</strong>
+            <p>jQuery, Bootstrap, AJAX, Programming Quotes API by Adam Pope, Tweet button API</p>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Application HTML -->
+
+      <div class="jumbotron">
+          <h2 id="city" class="text-center">Getting location...</h2>
+          <div class="row">
+            <div class="col-sm-4">
+              <canvas id="weatherIcon" width="128" height="128"></canvas>
+              <p id="summary" class="text-center">
+                <p>
+            </div>
+            <div class="col-sm-4">
+              <h1 id="fTemperature" class="text-center">--&#8457;</h1>
+              <h1 id="cTemperature" class="text-center" style="display: none">--&#8451;</h1>
+              <button id="tempToggle" class="btn btn-block btn-default">&#8457; / &#8451;</button>
+            </div>
+            <div class="col-sm-4">
+                <ul class="list-unstyled">
+                  <li>
+                    <h3>Details</h3>
+                    <li>
+                      <h4 id="wind">Wind: </h4></li>
+                    <li>
+                      <h4 id="humidity">Humidity: </h4></li>
+                    <li>
+                      <h4 id="pressure">Pressure: </h4></li>
+                    <li>
+                      <h4 id="visability">Visability: </h4></li>
+                </ul>
+            </div>
+          </div>
+        </div>
+
+      <!-- End App -->
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p class="text-muted">©2016 Ray Meibaum. All rights reserved.</p>
+    </div>
+  </footer>
 
   <!-- JavaScript -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/skycons/1396634940/skycons.min.js"></script>
   <script src="js/script.js"></script>
+</body>
+
 </html>
