@@ -17,40 +17,27 @@
 </head>
 
 <body>
-  <div class="container">
-    <div class="page-header">
-      <h1>Ray Meibaum<br/><small>Web Developer | Atlanta, GA</small></h1>
-    </div>
-  </div>
-    <!-- Project Details -->
+  <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          <h3 class="panel-title"><a data-toggle="collapse" href="#toCollapse" aria-expanded="false" aria-controls="toCollapse">Local Weather - Click for Details</a></h3>
-        </div>
-        <ul class="list-group collapse" id="toCollapse">
-          <li class="list-group-item">
-            <strong>Description</strong>
-            <p>Local Weather is an intermediate front end project on freecodecamp.com. The program allows you to get relevant weather information based on your current location.</p>
-          </li>
-          <li class="list-group-item">
-            <strong>Features</strong>
-            <p>Local Weather accesses your devices current location and then makes API calls to Google for geolocation information as well as Forecast.io for the weather forecast.</p>
-          </li>
-          <li class="list-group-item">
-            <strong>Challenges</strong>
-            <p>Working with location was easier than expected. Honestly, the hardest part was formatting the results correctly. I used jQuery more in this app than ever before.</p>
-          </li>
-          <li class="list-group-item">
-            <strong>Technology</strong>
-            <p>jQuery, Bootstrap, AJAX, Forecast.io API, Google Geolocation API</p>
-          </li>
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Ray Meibaum</a>
+      </div>
+      <div class="navbar-collapse collapse" id="navbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a onclick="window.history.back();">Back</a></li>
         </ul>
       </div>
     </div>
+  </nav>
   <main>
     <!-- Application HTML -->
-    
+    <div class="container">
       <h1 id="city" class="text-center">Getting location...</h1>
       <div class="row" id="weather">
         <div class="col-sm-6">
@@ -69,7 +56,7 @@
           <p id="visability"><strong>Visability: </strong></p>
         </div>
       </div>
-
+    </div>
     <!-- End Application HTML -->
   </main>
   <footer class="footer">
@@ -84,5 +71,5 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/skycons/1396634940/skycons.min.js"></script>
   <script src="js/script.js"></script>
 </body>
-</html>
 
+</html>
